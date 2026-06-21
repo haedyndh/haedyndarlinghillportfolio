@@ -726,7 +726,7 @@
       <div class="about-layout">
 
       <div class="about-photo">
-        <img src="images/Headshot.png" alt="Haedyn Darling Hill" />
+        <img src="/haedyndarlinghillportfolio/images/Headshot.png" alt="Haedyn Darling-Hill" />
       </div>
 
         <div class="about-content">
