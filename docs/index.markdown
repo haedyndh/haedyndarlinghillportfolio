@@ -776,7 +776,26 @@
               </p>
             </div>
           </article>
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/P2P1.png" alt="Point-to-Point - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P2.png" alt="Point-to-Point - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 3" loading="lazy" />
+              </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2025 – Dec 2025</span>
+              </div>
+              <h3 class="project-title">Point-to-Point Communication System</h3>
+              <p class="project-blurb">
+                This was built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
+              </p>
+            </div>
+          </article>
         </div>
+        
 
         <!-- CODE -->
         <div class="tab-panel project-grid" id="tab-code">
