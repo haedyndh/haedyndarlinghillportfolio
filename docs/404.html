@@ -1,25 +1,77 @@
----
-permalink: /404.html
-layout: page
----
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Haedyn Darling-Hill</title>
+  <meta name="theme-color" content="#0d0d14" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0d0d14;
+      color: #eceae4;
+      font-family: 'DM Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, #2a2a3a 1px, transparent 1px);
+      background-size: 32px 32px;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .code {
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      color: #4a9eca;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+    }
+    .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7a7a90;
+      margin-top: 1.25rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #eceae4;
+      border: 1px solid #2a2a3a;
+      padding: 0.65rem 1.3rem;
+      border-radius: 4px;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover { border-color: #4a9eca; color: #4a9eca; }
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <p class="label">// page not found — nothing here</p>
+  <a href="/haedyndarlinghillportfolio/">← Back to portfolio</a>
+</body>
+</html>
