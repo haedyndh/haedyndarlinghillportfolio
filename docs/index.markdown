@@ -726,22 +726,30 @@
       <div class="about-layout">
 
         <div class="about-photo">
-          <!-- Replace with: <img src="images/you.jpg" alt="Haedyn Darling-Hill" /> -->
+          <!-- Replace with: <img src="haedyndarlinghill.github.io/docs/images/Headshot.png" alt="Haedyn Darling-Hill" /> -->
           <div class="about-photo-placeholder">[ photo ]</div>
         </div>
 
         <div class="about-content">
-          <h2>Haedyn<br/>Darling-Hill</h2>
+          <h2>Haedyn<br/>Darling Hill</h2>
 
           <!-- ═══ EDIT THIS SECTION ═══ -->
           <p>
-            <strong>Replace this with a sentence or two about yourself</strong> — what program you're in, what year, and what kind of engineering you're pursuing.
+            <strong>Mechanical Engineering, student-athlete </strong> — I am persuing a Mechanical Engineering BS on track to graduate in 2028. Since 2020, I have gained experience in underwater ROVs, FRC and VEX robotics, full-system design, CAD and project design, MATLAB, Python, and biomechanical research.
           </p>
           <p>
-            Talk about what drives you: the type of problems you like to solve, the tools or environments you thrive in, or the kind of work you're aiming for after graduation.
+            From 2019–2021, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> team at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one from scratch. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
+            After transferring schools, I founded a VEX robotics team from the ground up: building the curriculum, leading three subteams, and running an internal competition model by end of year one.
+            My junior and senior years, I participated in an invite-only research program in partnership with a Sikorsky Lockheed Martin engineer. Working on the X2 helicopter's main gearbox, I designed an electrical transmission system using back-EMF to reduce the vibrational instability inherent in the aircraft's mechanical drivetrain at high speeds and demonstrated proof-of-concept viability at scale.
           </p>
           <p>
-            Optionally add a line about interests outside of engineering — it makes the page feel human and rounds out who you are.
+          Both university summers have been spent in technical roles outside the classroom.
+          After freshman year, I interned at Synthesia.io on the R&D team, contributing to AI model design with a focus on improving the naturalism of synthesized speech and image output.
+          After sophomore year, I was awarded the largest undergraduate research grant available at my institution to study the relationship between inter-limb hip asymmetry and musculoskeletal pain — applying biomechanical analysis to a clinical research context.
+          </p>
+
+          <p>
+            I play as a fullback/wing for Boston University's Women's Rugby team! Team commitments take upwards of 10-15 hours per week, and I love every minute of it. I have been an athlete in various sports for the better of 8 years, and it has made me who I am. Sports, and rugby in particular, have taught me to be resiliant, hard working, and collaborative. Playing on the rugby team makes me a better engineer every day.
           </p>
           <!-- ════════════════════════ -->
 
