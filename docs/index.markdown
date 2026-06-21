@@ -724,7 +724,7 @@
               </div>
               <h3 class="project-title">Point-to-Point Communication System</h3>
               <p class="project-blurb">
-                This was built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
+                Built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
               </p>
             </div>
           </article>
@@ -746,7 +746,7 @@
               </div>
               <h3 class="project-title">Temperature Sensor</h3>
               <p class="project-blurb">
-                This was built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings and I use it every day in my apartment.
+                Built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings and I use it every day in my apartment.
               </p>
             </div>
           </article>
@@ -767,6 +767,46 @@
               <a class="project-link" href="#" target="_blank">View on GitHub →</a>
             </div>
           </article>
+
+          <article class="project-card">
+            <div class="project-img">
+              <img src="/haedyndarlinghillportfolio/images/Sikorsky1.png" alt="Sikorsky Transmission" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2023 – May 2024</span>
+              </div>
+              <h3 class="project-title">X2 Helicopter Transmission</h3>
+              <p class="project-blurb">
+                Assessed viability of back-emf based transmission in X2 helicopter. As mentioned on my About page, I partnered with a Sikorsky engineer to test if alternative transmission systems were possible in the X2. Designed and assembled scaled-down system, measured torque output, and concluded large-scale viability.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/MATE2.png" alt="MATE ROV - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/MATE1.png" alt="MATE ROV - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Nov 2020 – Sep 2023</span>
+              </div>
+              <h3 class="project-title">Temperature Sensor</h3>
+              <p class="project-blurb">
+                In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. While my main responsibility was researching, designing, and building a compatible ESC for underwater use, I also gained experience designing the gripper and aiding in developing bouyancy. Designing the ESCs for BLDC motors was challenging but taught me the fundamentals of troubleshooting with oscilloscopes and in code, designing PCBs in Altium, and surface mount soldering. Not pictured are ballast tanks I helped design for Z-plane translation. 
+              </p>
+            </div>
+          </article>
+
+          
           <!-- ═══════════════════════════════════════════════════════ -->
         </div>
 
@@ -822,11 +862,11 @@
               </div>
               <h3 class="project-title">Point-to-Point Communication System</h3>
               <p class="project-blurb">
-                This was built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
+                Built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
               </p>
             </div>
           </article>
-          
+
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -844,7 +884,46 @@
               </div>
               <h3 class="project-title">Temperature Sensor</h3>
               <p class="project-blurb">
-                This was built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings and I use it every day in my apartment.
+                Built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings, and I use it every day in my apartment.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img">
+              <div class="project-img">
+              <img src="/haedyndarlinghillportfolio/images/Sikorsky1.png" alt="Sikorsky Transmission" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2023 – May 2024</span>
+              </div>
+              <h3 class="project-title">X2 Helicopter Transmission</h3>
+              <p class="project-blurb">
+                Assessed viability of back-emf based transmission in X2 helicopter. As mentioned on my About page, I partnered with a Sikorsky engineer to test if alternative transmission systems were possible in the X2. Designed and assembled scaled-down system, measured torque output, and concluded large-scale viability.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/MATE2.png" alt="MATE ROV - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/MATE1.png" alt="MATE ROV - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Nov 2020 – Sep 2023</span>
+              </div>
+              <h3 class="project-title">Temperature Sensor</h3>
+              <p class="project-blurb">
+                In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. While my main responsibility was researching, designing, and building a compatible ESC for underwater use, I also gained experience designing the gripper and aiding in developing bouyancy. Designing the ESCs for BLDC motors was challenging but taught me the fundamentals of troubleshooting with oscilloscopes and in code, designing PCBs in Altium, and surface mount soldering. Not pictured are ballast tanks I helped design for Z-plane translation. 
               </p>
             </div>
           </article>
@@ -896,7 +975,7 @@
             <strong>Mechanical Engineering, student-athlete </strong> — I am persuing a Mechanical Engineering BS on track to graduate in 2028. Since 2020, I have gained experience in underwater ROVs, FRC and VEX robotics, full-system design, CAD and project design, MATLAB, Python, and biomechanical research.
           </p>
           <p>
-            From 2019–2021, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> team at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one from scratch. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
+            From 2020–2023, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> team at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one from scratch. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
             After transferring schools, I founded a VEX robotics team from the ground up: building the curriculum, leading three subteams, and running an internal competition model by end of year one.
             My junior and senior years, I participated in an invite-only research program in partnership with a Sikorsky Lockheed Martin engineer. Working on the X2 helicopter's main gearbox, I designed an electrical transmission system using back-EMF to reduce the vibrational instability inherent in the aircraft's mechanical drivetrain at high speeds and demonstrated proof-of-concept viability at scale.
           </p>
