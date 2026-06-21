@@ -712,6 +712,10 @@
                 <img src="/haedyndarlinghillportfolio/images/P2P2.png" alt="Point-to-Point - view 2" loading="lazy" />
                 <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 3" loading="lazy" />
               </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
             <div class="project-body">
               <div class="project-meta">
                 <span class="project-tag tag-built">Built</span>
@@ -768,9 +772,9 @@
             <div class="project-body">
               <div class="project-meta">
                 <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Jan 2025 – Apr 2025</span>
+                <span class="project-timeline">Jan 2026 – Apr 2026</span>
               </div>
-              <h3 class="project-title">Warren Truss Design</h3>
+              <h3 class="project-title">Truss Design</h3>
               <p class="project-blurb">
                 Designed and built a Warren truss within strict material and geometric constraints. Developed MATLAB code to predict collapse load based on joint placement and member length, then iterated in CAD to optimize the design before fabrication.
               </p>
@@ -783,6 +787,10 @@
                 <img src="/haedyndarlinghillportfolio/images/P2P2.png" alt="Point-to-Point - view 2" loading="lazy" />
                 <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 3" loading="lazy" />
               </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
             <div class="project-body">
               <div class="project-meta">
                 <span class="project-tag tag-built">Built</span>
@@ -795,7 +803,6 @@
             </div>
           </article>
         </div>
-        
 
         <!-- CODE -->
         <div class="tab-panel project-grid" id="tab-code">
