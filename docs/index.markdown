@@ -601,32 +601,6 @@
     @media (prefers-reduced-motion: reduce) {
       * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
-// ── Carousels ────────────────────────────────────────────
-document.querySelectorAll('[data-carousel]').forEach(carousel => {
-  const track = carousel.querySelector('.carousel-track');
-  const imgs = track.querySelectorAll('img');
-  const dotsContainer = carousel.querySelector('.carousel-dots');
-  let current = 0;
-
-  // Build dots
-  imgs.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goTo(i));
-    dotsContainer.appendChild(dot);
-  });
-
-  function goTo(n) {
-    current = (n + imgs.length) % imgs.length;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === current);
-    });
-  }
-
-  carousel.querySelector('.carousel-prev').addEventListener('click', () => goTo(current - 1));
-  carousel.querySelector('.carousel-next').addEventListener('click', () => goTo(current + 1));
-});
   </style>
 </head>
 <body>
@@ -776,7 +750,6 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
         </div>
 
         <!-- BUILT -->
-        <!-- BUILT -->
         <div class="tab-panel project-grid" id="tab-built">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
@@ -802,13 +775,6 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
           </article>
         </div>
 
-        <!-- CODE -->
-        <div class="tab-panel project-grid" id="tab-code">
-          <div class="empty-state">
-            <p>// no code projects yet</p>
-            <p>Copy a project-card block from the "All" tab and paste it here.</p>
-          </div>
-        </div>
         <!-- CODE -->
         <div class="tab-panel project-grid" id="tab-code">
           <div class="empty-state">
@@ -929,6 +895,33 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
     // Prevent default on nav links
     document.querySelectorAll('.nav-links a[onclick]').forEach(a => {
       a.addEventListener('click', e => e.preventDefault());
+    });
+
+    // ── Carousels ────────────────────────────────────────────
+    document.querySelectorAll('[data-carousel]').forEach(carousel => {
+      const track = carousel.querySelector('.carousel-track');
+      const imgs = track.querySelectorAll('img');
+      const dotsContainer = carousel.querySelector('.carousel-dots');
+      let current = 0;
+
+      // Build dots
+      imgs.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      function goTo(n) {
+        current = (n + imgs.length) % imgs.length;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      carousel.querySelector('.carousel-prev').addEventListener('click', () => goTo(current - 1));
+      carousel.querySelector('.carousel-next').addEventListener('click', () => goTo(current + 1));
     });
   </script>
 </body>
