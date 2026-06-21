@@ -770,6 +770,7 @@
 
           <article class="project-card">
             <div class="project-img">
+              <div class="project-img">
               <img src="/haedyndarlinghillportfolio/images/Sikorsky1.png" alt="Sikorsky Transmission" loading="lazy" />
             </div>
             <div class="project-body">
