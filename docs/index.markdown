@@ -627,16 +627,18 @@
           <!-- SAMPLE — delete or replace these once you add real projects -->
           <article class="project-card">
             <div class="project-img">
-              <div class="project-img-placeholder">[ image ]</div>
+              <img src="/haedyndarlinghillportfolio/images/Truss1.png" alt="Haedyn Darling-Hill" />
+              <img src="/haedyndarlinghillportfolio/images/Truss2.png" alt="Haedyn Darling-Hill" /> 
+              <img src="/haedyndarlinghillportfolio/images/Truss3.png" alt="Haedyn Darling-Hill" />                           
             </div>
             <div class="project-body">
               <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">Jan 2025 – Present</span>
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Jan 2025 – April 2025</span>
               </div>
-              <h3 class="project-title">Your First CAD Project</h3>
+              <h3 class="Truss Design">Truss based on Warren Truss</h3>
               <p class="project-blurb">
-                Replace this with a real project. Describe the design problem, your approach, and what you delivered. Two or three sentences works well here.
+                In mechanics 1, we were tasked with designing a truss. We built code on MATLAB to determine the weight at which a truss would collapse depending on joint placement and member length. Using this code, I iterated designs in CAD to fit constraints set by the project statement. The load joint had to be 8in from a support joint, all members were to be within 8-12in, and a total of 10ft of material was to be used.
               </p>
             </div>
           </article>
@@ -755,18 +757,19 @@
           <div class="skills-grid">
             <!-- ═══ EDIT THESE SKILLS ═══ -->
             <span class="skill-item">SolidWorks</span>
-            <span class="skill-item">Fusion 360</span>
+            <span class="skill-item">Onshape</span>
             <span class="skill-item">Python</span>
             <span class="skill-item">MATLAB</span>
             <span class="skill-item">FDM / SLA printing</span>
             <span class="skill-item">PCB Design</span>
-            <span class="skill-item">C / C++</span>
             <span class="skill-item">Arduino / RPi</span>
+            <span class="skill-item">Visual3D</span>
+            <span class="skill-item">Vicon</span>
             <!-- Add or remove as needed -->
           </div>
 
           <div class="about-links">
-            <a class="btn btn-primary" href="mailto:your@email.com">Get in touch</a>
+            <a class="btn btn-primary" href="mailto:haedyndh@bu.edu">Get in touch</a>
             <a class="btn btn-ghost" href="https://github.com/haedyndh" target="_blank" rel="noopener">GitHub ↗</a>
             <a class="btn btn-ghost" href="resume.pdf" target="_blank">Résumé ↗</a>
           </div>
@@ -784,7 +787,7 @@
     <p>
       <a href="https://github.com/haedyndh" target="_blank" rel="noopener">GitHub</a>
       &nbsp;·&nbsp;
-      <a href="mailto:your@email.com">Email</a>
+      <a href="mailto:haedyndh@bu.edu">Email</a>
     </p>
   </footer>
 
