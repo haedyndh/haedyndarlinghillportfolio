@@ -709,8 +709,8 @@
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
                 <img src="/haedyndarlinghillportfolio/images/P2P1.png" alt="Point-to-Point - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/P2P2.png" alt="Point-to-Point - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P4.png" alt="Point-to-Point - view 3" loading="lazy" />
               </div>
               <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
               <button class="carousel-btn carousel-next" aria-label="Next">›</button>
@@ -784,8 +784,8 @@
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
                 <img src="/haedyndarlinghillportfolio/images/P2P1.png" alt="Point-to-Point - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/P2P2.png" alt="Point-to-Point - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P4.png" alt="Point-to-Point - view 3" loading="lazy" />
               </div>
               <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
               <button class="carousel-btn carousel-next" aria-label="Next">›</button>
