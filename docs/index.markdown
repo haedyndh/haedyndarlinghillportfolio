@@ -626,22 +626,27 @@
 
           <!-- SAMPLE — delete or replace these once you add real projects -->
           <article class="project-card">
-            <div class="project-img">
-              <img src="/haedyndarlinghillportfolio/images/Truss1.png" alt="Haedyn Darling-Hill" />
-              <img src="/haedyndarlinghillportfolio/images/Truss2.png" alt="Haedyn Darling-Hill" /> 
-              <img src="/haedyndarlinghillportfolio/images/Truss3.png" alt="Haedyn Darling-Hill" />                           
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/Truss1.png" alt="Warren Truss - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Truss2.png" alt="Warren Truss - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Truss3.png" alt="Warren Truss - view 3" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
             </div>
             <div class="project-body">
               <div class="project-meta">
                 <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Jan 2025 – April 2025</span>
+                <span class="project-timeline">Jan 2025 – Apr 2025</span>
               </div>
-              <h3 class="Truss Design">Truss based on Warren Truss</h3>
-              <p class="project-blurb">
-                In mechanics 1, we were tasked with designing a truss. We built code on MATLAB to determine the weight at which a truss would collapse depending on joint placement and member length. Using this code, I iterated designs in CAD to fit constraints set by the project statement. The load joint had to be 8in from a support joint, all members were to be within 8-12in, and a total of 10ft of material was to be used.
-              </p>
-            </div>
-          </article>
+            <h3 class="project-title">Warren Truss Design</h3>
+            <p class="project-blurb">
+              Designed and built a Warren truss within strict material and geometric constraints. Developed MATLAB code to predict collapse load based on joint placement and member length, then iterated in CAD to optimize the design before fabrication.
+            </p>
+          </div>
+        </article>
 
           <article class="project-card">
             <div class="project-img">
