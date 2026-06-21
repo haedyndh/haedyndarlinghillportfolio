@@ -799,7 +799,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Nov 2020 – Sep 2023</span>
               </div>
-              <h3 class="project-title">Temperature Sensor</h3>
+              <h3 class="project-title">Underwater ROV</h3>
               <p class="project-blurb">
                 In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. While my main responsibility was researching, designing, and building a compatible ESC for underwater use, I also gained experience designing the gripper and aiding in developing bouyancy. Designing the ESCs for BLDC motors was challenging but taught me the fundamentals of troubleshooting with oscilloscopes and in code, designing PCBs in Altium, and surface mount soldering. Not pictured are ballast tanks I helped design for Z-plane translation. 
               </p>
@@ -921,7 +921,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Nov 2020 – Sep 2023</span>
               </div>
-              <h3 class="project-title">Temperature Sensor</h3>
+              <h3 class="project-title">Underwater ROV</h3>
               <p class="project-blurb">
                 In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. While my main responsibility was researching, designing, and building a compatible ESC for underwater use, I also gained experience designing the gripper and aiding in developing bouyancy. Designing the ESCs for BLDC motors was challenging but taught me the fundamentals of troubleshooting with oscilloscopes and in code, designing PCBs in Altium, and surface mount soldering. Not pictured are ballast tanks I helped design for Z-plane translation. 
               </p>
@@ -982,7 +982,7 @@
           <p>
           Both university summers have been spent in technical roles outside the classroom.
           After freshman year, I interned at Synthesia.io on the R&D team, contributing to AI model design with a focus on improving the naturalism of synthesized speech and image output.
-          After sophomore year, I was awarded the largest undergraduate research grant available at my institution to study the relationship between inter-limb hip asymmetry and musculoskeletal pain — applying biomechanical analysis to a clinical research context.
+          After sophomore year, I was awarded the largest undergraduate research grant available at my institution to study the relationship between inter-limb hip asymmetry and pain; applying biomechanical analysis to a clinical research context.
           </p>
 
           <p>
