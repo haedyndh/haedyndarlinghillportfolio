@@ -727,7 +727,7 @@
 
         <div class="about-photo">
           <!-- Replace with: <img src="haedyndarlinghill.github.io/docs/images/Headshot.png" alt="Haedyn Darling-Hill" /> -->
-          <div class="about-photo-placeholder">[ photo ]</div>
+          <div class="haedyndarlinghill.github.io/docs/images/Headshot.png" alt="Haedyn Darling-Hill">[ photo ]</div>
         </div>
 
         <div class="about-content">
