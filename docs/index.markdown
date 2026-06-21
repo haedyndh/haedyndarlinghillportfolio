@@ -682,6 +682,7 @@
           -->
 
           <!-- SAMPLE — delete or replace these once you add real projects -->
+
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -724,6 +725,28 @@
               <h3 class="project-title">Point-to-Point Communication System</h3>
               <p class="project-blurb">
                 This was built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/TempBox1.png" alt="Temperature Sensor Box - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/TempBox2.png" alt="Temperature Sensor Box - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2024 – Dec 2024</span>
+              </div>
+              <h3 class="project-title">Temperature Sensor</h3>
+              <p class="project-blurb">
+                This was built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings and I use it every day in my apartment.
               </p>
             </div>
           </article>
@@ -780,6 +803,7 @@
               </p>
             </div>
           </article>
+
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -802,6 +826,30 @@
               </p>
             </div>
           </article>
+          
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/TempBox1.png" alt="Temperature Sensor Box - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/TempBox2.png" alt="Temperature Sensor Box - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2024 – Dec 2024</span>
+              </div>
+              <h3 class="project-title">Temperature Sensor</h3>
+              <p class="project-blurb">
+                This was built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings and I use it every day in my apartment.
+              </p>
+            </div>
+          </article>
+
+
         </div>
 
         <!-- CODE -->
