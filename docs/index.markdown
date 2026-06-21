@@ -10,6 +10,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
+    /* ── CAROUSEL ───────────────────────────────────────────── */
+.carousel { position: relative; overflow: hidden; }
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s var(--ease);
+}
+
+.carousel-track img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(13,13,20,0.7);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.carousel-btn:hover { background: rgba(74,158,202,0.3); }
+.carousel-prev { left: 0.6rem; }
+.carousel-next { right: 0.6rem; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-lit);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carousel-dot.active { background: var(--accent); }
     /* ── TOKENS ─────────────────────────────────────────────── */
     :root {
       --bg:        #0d0d14;
@@ -544,6 +601,32 @@
     @media (prefers-reduced-motion: reduce) {
       * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
+// ── Carousels ────────────────────────────────────────────
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const imgs = track.querySelectorAll('img');
+  const dotsContainer = carousel.querySelector('.carousel-dots');
+  let current = 0;
+
+  // Build dots
+  imgs.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(n) {
+    current = (n + imgs.length) % imgs.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  carousel.querySelector('.carousel-prev').addEventListener('click', () => goTo(current - 1));
+  carousel.querySelector('.carousel-next').addEventListener('click', () => goTo(current + 1));
+});
   </style>
 </head>
 <body>
@@ -694,12 +777,30 @@
 
         <!-- BUILT -->
         <div class="tab-panel project-grid" id="tab-built">
-          <div class="empty-state">
-            <p>// no built projects yet</p>
-            <p>Copy a project-card block from the "All" tab and paste it here.</p>
+          <div class="tab-panel project-grid" id="tab-built">
+            <article class="project-card">
+              <div class="project-img carousel" data-carousel>
+                <div class="carousel-track">
+                  <img src="/haedyndarlinghillportfolio/images/Truss1.png" alt="Warren Truss - view 1" loading="lazy" />
+                  <img src="/haedyndarlinghillportfolio/images/Truss2.png" alt="Warren Truss - view 2" loading="lazy" />
+                  <img src="/haedyndarlinghillportfolio/images/Truss3.png" alt="Warren Truss - view 3" loading="lazy" />
+                </div>
+                <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+                <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+                <div class="carousel-dots"></div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span class="project-tag tag-built">Built</span>
+                  <span class="project-timeline">Jan 2025 – Apr 2025</span>
+                </div>
+                <h3 class="project-title">Warren Truss Design</h3>
+                <p class="project-blurb">
+                  Designed and built a Warren truss within strict material and geometric constraints. Developed MATLAB code to predict collapse load based on joint placement and member length, then iterated in CAD to optimize the design before fabrication.
+                </p>
+              </div>
+            </article>
           </div>
-        </div>
-
         <!-- CODE -->
         <div class="tab-panel project-grid" id="tab-code">
           <div class="empty-state">
