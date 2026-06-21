@@ -725,10 +725,9 @@
     <div class="section">
       <div class="about-layout">
 
-        <div class="about-photo">
-          <!-- Replace with: <img src="haedyndarlinghill.github.io/docs/images/Headshot.png" alt="Haedyn Darling-Hill" /> -->
-          <div class="haedyndarlinghill.github.io/docs/images/Headshot.png" alt="Haedyn Darling-Hill">[ photo ]</div>
-        </div>
+      <div class="about-photo">
+        <img src="images/Headshot.png" alt="Haedyn Darling Hill" />
+      </div>
 
         <div class="about-content">
           <h2>Haedyn<br/>Darling Hill</h2>
