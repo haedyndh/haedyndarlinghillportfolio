@@ -751,22 +751,6 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-img">
-              <div class="project-img-placeholder">[ image ]</div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-code">Code</span>
-                <span class="project-timeline">Mar 2024 – May 2024</span>
-              </div>
-              <h3 class="project-title">Your First Code Project</h3>
-              <p class="project-blurb">
-                Replace this with a real project. Name the languages/tools you used and what the software does or automates.
-              </p>
-              <a class="project-link" href="#" target="_blank">View on GitHub →</a>
-            </div>
-          </article>
 
           <article class="project-card">
             <div class="project-img">
