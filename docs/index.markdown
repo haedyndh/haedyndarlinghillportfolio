@@ -806,6 +806,28 @@
             </div>
           </article>
 
+                    <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2022 – May 2024</span>
+              </div>
+              <h3 class="project-title">Underwater ROV</h3>
+              <p class="project-blurb">
+                I founded and led the robotics team at the Berkshire School. The school had little experience or funding for a robotics team, so we operated largely as a learning opportunity. Over my tenure, I taught ~30 students the basics of robotics in programming, electrical, and mechanical disciplines. I also coordinated inter-school competitions between two chassis teams.
+              </p>
+            </div>
+          </article>
+
           
           <!-- ═══════════════════════════════════════════════════════ -->
         </div>
@@ -927,6 +949,28 @@
             </div>
           </article>
 
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2022 – May 2024</span>
+              </div>
+              <h3 class="project-title">Underwater ROV</h3>
+              <p class="project-blurb">
+                I founded and led the robotics team at the Berkshire School. The school had little experience or funding for a robotics team, so we operated largely as a learning opportunity. Over my tenure, I taught ~30 students the basics of robotics in programming, electrical, and mechanical disciplines. I also coordinated inter-school competitions between two chassis teams.
+              </p>
+            </div>
+          </article>
+
 
         </div>
 
@@ -971,7 +1015,7 @@
 
           <!-- ═══ EDIT THIS SECTION ═══ -->
           <p>
-            <strong>Mechanical Engineering, student-athlete </strong> — I am persuing a Mechanical Engineering BS on track to graduate in 2028. Since 2020, I have gained experience in underwater ROVs, FRC and VEX robotics, full-system design, CAD and project design, MATLAB, Python, and biomechanical research.
+            <strong>Mechanical Engineer, Student-Athlete </strong> — I am persuing a Mechanical Engineering BS on track to graduate in 2028. Since 2020, I have gained experience in underwater ROVs, FRC and VEX robotics, full-system design, CAD and project design, MATLAB, Python, and biomechanical research.
           </p>
           <p>
             From 2020–2023, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> team at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one from scratch. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
