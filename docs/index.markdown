@@ -637,7 +637,7 @@
       </div>
 
       <div class="section">
-        <p class="section-sub">Things I've designed, built, and coded — organized by discipline.</p>
+        <p class="section-sub">Things I've designed, built, and coded — organized by discipline. Click on the individual sections to see more details.</p>
 
         <!-- Tab Bar -->
         <div class="tab-bar">
@@ -700,9 +700,6 @@
                 <span class="project-timeline">Jan 2026 – Apr 2026</span>
               </div>
             <h3 class="project-title">Truss Design</h3>
-            <p class="project-blurb">
-              Designed and built a Warren truss within strict material and geometric constraints. Developed MATLAB code to predict collapse load based on joint placement and member length, then iterated in CAD to optimize the design before fabrication.
-            </p>
           </div>
         </article>
 
