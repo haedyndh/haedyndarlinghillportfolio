@@ -805,7 +805,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Sep 2022 – May 2024</span>
               </div>
-              <h3 class="project-title">Underwater ROV</h3>
+              <h3 class="project-title">VEX Robotics</h3>
               <p class="project-blurb">
                 I founded and led the robotics team at the Berkshire School. The school had little experience or funding for a robotics team, so we operated largely as a learning opportunity. Over my tenure, I taught ~30 students the basics of robotics in programming, electrical, and mechanical disciplines. I also coordinated inter-school competitions between two chassis teams.
               </p>
@@ -948,7 +948,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Sep 2022 – May 2024</span>
               </div>
-              <h3 class="project-title">Underwater ROV</h3>
+              <h3 class="project-title">VEX Robotics</h3>
               <p class="project-blurb">
                 I founded and led the robotics team at the Berkshire School. The school had little experience or funding for a robotics team, so we operated largely as a learning opportunity. Over my tenure, I taught ~30 students the basics of robotics in programming, electrical, and mechanical disciplines. I also coordinated inter-school competitions between two chassis teams.
               </p>
