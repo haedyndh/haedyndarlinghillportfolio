@@ -778,8 +778,8 @@
                     <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 2" loading="lazy" />
               </div>
               <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
               <button class="carousel-btn carousel-next" aria-label="Next">›</button>
@@ -918,8 +918,8 @@
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 2" loading="lazy" />
               </div>
               <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
               <button class="carousel-btn carousel-next" aria-label="Next">›</button>
