@@ -981,7 +981,7 @@
 
           <!-- ═══ EDIT THIS SECTION ═══ -->
           <p>
-            <strong>Mechanical Engineer, Student-Athlete </strong> — I am persuing a Mechanical Engineering BS on track to graduate in 2028. Since 2020, I have gained experience in underwater ROVs, FRC and VEX robotics, full-system design, CAD and project design, MATLAB, Python, and biomechanical research.
+            <strong>Mechanical Engineer, Student-Athlete </strong> — I am pursuing a Mechanical Engineering BS on track to graduate in 2028. Since 2020, I have gained experience in underwater ROVs, FRC and VEX robotics, full-system design, CAD and project design, MATLAB, Python, and biomechanical research.
           </p>
           <p>
             From 2020–2023, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> team at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one from scratch. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
