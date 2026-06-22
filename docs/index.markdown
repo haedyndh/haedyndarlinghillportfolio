@@ -825,7 +825,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Jan 2026 – Apr 2026</span>
               </div>
-              <h3 class="project-title">Truss Design</h3>
+              <h3 class="project-title">Truss Design (JANICE)</h3>
               <p class="project-blurb">
                 Designed and built a Warren truss within strict material and geometric constraints. Developed MATLAB code to predict collapse load based on joint placement and member length, then iterated in CAD to optimize the design before fabrication and assembly.
               </p>
@@ -848,7 +848,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Sep 2025 – Dec 2025</span>
               </div>
-              <h3 class="project-title">Point-to-Point Communication System</h3>
+              <h3 class="project-title">Point-to-Point Communication System (HERMES)</h3>
               <p class="project-blurb">
                 Built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
               </p>
@@ -870,7 +870,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Sep 2024 – Dec 2024</span>
               </div>
-              <h3 class="project-title">Temperature Sensor</h3>
+              <h3 class="project-title">Temperature Sensor (JAKE)</h3>
               <p class="project-blurb">
                 Built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings, and I use it every day in my apartment.
               </p>
@@ -908,7 +908,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Nov 2020 – Sep 2023</span>
               </div>
-              <h3 class="project-title">Underwater ROV</h3>
+              <h3 class="project-title">Underwater ROV (FLOAT-E)</h3>
               <p class="project-blurb">
                 In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. While my main responsibility was researching, designing, and building a compatible ESC for underwater use, I also gained experience designing the gripper and aiding in developing bouyancy. Designing the ESCs for BLDC motors was challenging but taught me the fundamentals of troubleshooting with oscilloscopes and in code, designing PCBs in Altium, and surface mount soldering. Not pictured are ballast tanks I helped design for Z-plane translation. 
               </p>
@@ -930,7 +930,7 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Sep 2022 – May 2024</span>
               </div>
-              <h3 class="project-title">VEX Robotics</h3>
+              <h3 class="project-title">VEX Robotics (HANSEL & GRETEL)</h3>
               <p class="project-blurb">
                 I founded and led the robotics team at the Berkshire School. The school had little experience or funding for a robotics team, so we operated largely as a learning opportunity. Over my tenure, I taught ~30 students the basics of robotics in programming, electrical, and mechanical disciplines. I also coordinated inter-school competitions between two chassis teams.
               </p>
