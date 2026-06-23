@@ -1088,7 +1088,7 @@
 
     <div class="hero">
       <p class="hero-eyebrow">About Me</p>
-      <h1>Engineer.<br/><span>Builder.</span></h1>
+      <h1>Engineer.<br/><span>Problem-Solver.</span></h1>
     </div>
 
     <div class="divider">
