@@ -11,62 +11,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     /* ── CAROUSEL ───────────────────────────────────────────── */
-.carousel { position: relative; overflow: hidden; }
+    .carousel { position: relative; overflow: hidden; }
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.35s var(--ease);
+    }
+    .carousel-track img,
+    .carousel-track video {
+      min-width: 100%;
+      height: 100%;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: #0d0d14;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(13,13,20,0.7);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 2;
+    }
+    .carousel-btn:hover { background: rgba(74,158,202,0.3); }
+    .carousel-prev { left: 0.6rem; }
+    .carousel-next { right: 0.6rem; }
+    .carousel-dots {
+      position: absolute;
+      bottom: 0.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.4rem;
+      z-index: 2;
+    }
+    .carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border-lit);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .carousel-dot.active { background: var(--accent); }
 
-.carousel-track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.35s var(--ease);
-}
-
-.carousel-track img {
-  min-width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(13,13,20,0.7);
-  border: 1px solid var(--border);
-  color: var(--text);
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
-  z-index: 2;
-}
-.carousel-btn:hover { background: rgba(74,158,202,0.3); }
-.carousel-prev { left: 0.6rem; }
-.carousel-next { right: 0.6rem; }
-
-.carousel-dots {
-  position: absolute;
-  bottom: 0.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.4rem;
-  z-index: 2;
-}
-
-.carousel-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--border-lit);
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.carousel-dot.active { background: var(--accent); }
     /* ── TOKENS ─────────────────────────────────────────────── */
     :root {
       --bg:        #0d0d14;
@@ -81,11 +79,9 @@
       --tag-cad:   #c97f3b;
       --tag-built: #5aab6d;
       --tag-code:  #7b7bea;
-
       --font-display: 'Syne', sans-serif;
       --font-body:    'Inter', sans-serif;
       --font-mono:    'DM Mono', monospace;
-
       --ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -101,15 +97,13 @@
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; object-fit: cover; }
+    img { display: block; width: 100%; object-fit: contain; }
 
-    /* ── GRID BACKGROUND (blueprint feel) ──────────────────── */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background-image:
-        radial-gradient(circle, #2a2a3a 1px, transparent 1px);
+      background-image: radial-gradient(circle, #2a2a3a 1px, transparent 1px);
       background-size: 32px 32px;
       opacity: 0.25;
       pointer-events: none;
@@ -130,7 +124,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-
     .nav-logo {
       font-family: var(--font-mono);
       font-size: 0.85rem;
@@ -138,13 +131,11 @@
       color: var(--accent);
       letter-spacing: 0.04em;
     }
-
     .nav-links {
       display: flex;
       gap: 0.25rem;
       list-style: none;
     }
-
     .nav-links a {
       font-family: var(--font-mono);
       font-size: 0.78rem;
@@ -157,16 +148,9 @@
       transition: color 0.2s var(--ease), background 0.2s var(--ease);
       cursor: pointer;
     }
-
     .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text);
-      background: var(--bg-hover);
-    }
-
-    .nav-links a.active {
-      color: var(--accent);
-    }
+    .nav-links a.active { color: var(--text); background: var(--bg-hover); }
+    .nav-links a.active { color: var(--accent); }
 
     /* ── PAGES ──────────────────────────────────────────────── */
     .page {
@@ -183,7 +167,6 @@
       padding: clamp(5rem, 12vw, 9rem) clamp(1.5rem, 8vw, 6rem) clamp(4rem, 8vw, 6rem);
       max-width: 900px;
     }
-
     .hero-eyebrow {
       font-family: var(--font-mono);
       font-size: 0.75rem;
@@ -193,7 +176,6 @@
       color: var(--accent);
       margin-bottom: 1.25rem;
     }
-
     .hero h1 {
       font-family: var(--font-display);
       font-size: clamp(2.8rem, 7vw, 5.5rem);
@@ -202,11 +184,7 @@
       letter-spacing: -0.03em;
       margin-bottom: 1.5rem;
     }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
+    .hero h1 span { color: var(--accent); }
     .hero p {
       font-size: 1.05rem;
       color: var(--muted);
@@ -214,12 +192,7 @@
       line-height: 1.8;
       margin-bottom: 2.5rem;
     }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
@@ -236,18 +209,9 @@
       cursor: pointer;
       transition: all 0.2s var(--ease);
     }
-
-    .btn-primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #0d0d14;
-    }
+    .btn-primary { background: var(--accent); border-color: var(--accent); color: #0d0d14; }
     .btn-primary:hover { background: #6ab8e2; border-color: #6ab8e2; }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--muted);
-    }
+    .btn-ghost { background: transparent; color: var(--muted); }
     .btn-ghost:hover { color: var(--text); border-color: var(--border-lit); background: var(--bg-hover); }
 
     /* ── DIVIDER ────────────────────────────────────────────── */
@@ -266,31 +230,10 @@
       color: var(--muted);
       white-space: nowrap;
     }
-    .divider-line {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
 
     /* ── SECTION ────────────────────────────────────────────── */
-    .section {
-      padding: 0 clamp(1.5rem, 8vw, 6rem) 6rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
+    .section { padding: 0 clamp(1.5rem, 8vw, 6rem) 6rem; }
     .section-sub {
       font-size: 0.88rem;
       color: var(--muted);
@@ -305,7 +248,6 @@
       border-bottom: 1px solid var(--border);
       margin-bottom: 3rem;
     }
-
     .tab-btn {
       font-family: var(--font-mono);
       font-size: 0.78rem;
@@ -324,23 +266,13 @@
       align-items: center;
       gap: 0.5rem;
     }
-
     .tab-btn:hover { color: var(--text); }
-
-    .tab-btn.active {
-      color: var(--text);
-      border-bottom-color: var(--accent);
-    }
-
-    .tab-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-    }
-    .tab-btn[data-tab="cad"] .tab-dot    { background: var(--tag-cad); }
-    .tab-btn[data-tab="built"] .tab-dot  { background: var(--tag-built); }
-    .tab-btn[data-tab="code"] .tab-dot   { background: var(--tag-code); }
-    .tab-btn[data-tab="all"] .tab-dot    { background: var(--accent); }
+    .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+    .tab-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .tab-btn[data-tab="cad"]   .tab-dot { background: var(--tag-cad); }
+    .tab-btn[data-tab="built"] .tab-dot { background: var(--tag-built); }
+    .tab-btn[data-tab="code"]  .tab-dot { background: var(--tag-code); }
+    .tab-btn[data-tab="all"]   .tab-dot { background: var(--accent); }
 
     .tab-panel { display: none; }
     .tab-panel.active { display: grid; }
@@ -350,7 +282,6 @@
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
       gap: 1.5rem;
     }
-
     .project-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -360,23 +291,39 @@
       flex-direction: column;
       transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
     }
-
-    .project-card:hover {
-      border-color: var(--border-lit);
-      transform: translateY(-3px);
-    }
-
+    .project-card:hover { border-color: var(--border-lit); transform: translateY(-3px); }
     .project-img {
       aspect-ratio: 16 / 9;
       background: var(--bg-hover);
       overflow: hidden;
       position: relative;
     }
+    .project-img img,
+    .project-img video {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      background: #0d0d14;
+      transition: transform 0.4s var(--ease);
+      cursor: zoom-in;
+    }
+    .project-card:hover .project-img img,
+    .project-card:hover .project-img video { transform: scale(1.02); }
 
-    .project-img img { height: 100%; transition: transform 0.4s var(--ease); }
-    .project-card:hover .project-img img { transform: scale(1.04); }
-
-    /* placeholder when no image */
+    /* expand icon overlay */
+    .project-img::after {
+      content: '⤢';
+      position: absolute;
+      top: 0.5rem;
+      right: 0.6rem;
+      font-size: 1rem;
+      color: rgba(236,234,228,0.55);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 3;
+    }
+    .project-img:hover::after { opacity: 1; }
     .project-img-placeholder {
       width: 100%;
       height: 100%;
@@ -389,21 +336,13 @@
       color: var(--border-lit);
       text-transform: uppercase;
     }
-
-    .project-body {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
+    .project-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
     .project-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 0.75rem;
     }
-
     .project-tag {
       font-family: var(--font-mono);
       font-size: 0.65rem;
@@ -413,18 +352,15 @@
       padding: 0.2rem 0.55rem;
       border-radius: 3px;
     }
-
-    .tag-cad   { background: rgba(201,127,59,0.15); color: var(--tag-cad); }
-    .tag-built { background: rgba(90,171,109,0.15); color: var(--tag-built); }
+    .tag-cad   { background: rgba(201,127,59,0.15);  color: var(--tag-cad); }
+    .tag-built { background: rgba(90,171,109,0.15);  color: var(--tag-built); }
     .tag-code  { background: rgba(123,123,234,0.15); color: var(--tag-code); }
-
     .project-timeline {
       font-family: var(--font-mono);
       font-size: 0.68rem;
       color: var(--muted);
       letter-spacing: 0.05em;
     }
-
     .project-title {
       font-family: var(--font-display);
       font-size: 1.2rem;
@@ -433,14 +369,7 @@
       line-height: 1.3;
       margin-bottom: 0.75rem;
     }
-
-    .project-blurb {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.75;
-      flex: 1;
-    }
-
+    .project-blurb { font-size: 0.875rem; color: var(--muted); line-height: 1.75; flex: 1; }
     .project-link {
       display: inline-flex;
       align-items: center;
@@ -455,6 +384,83 @@
     }
     .project-link:hover { gap: 0.6rem; }
 
+    /* ── LIGHTBOX ───────────────────────────────────────────── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(5,5,10,0.95);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .lightbox.open { display: flex; }
+
+    .lightbox-media {
+      max-width: 92vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.7);
+      display: block;
+    }
+    .lightbox-media video {
+      max-width: 92vw;
+      max-height: 82vh;
+      border-radius: 4px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      background: none;
+      border: 1px solid var(--border-lit);
+      color: var(--muted);
+      font-size: 1.4rem;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .lightbox-close:hover { color: var(--text); border-color: var(--text); }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(13,13,20,0.7);
+      border: 1px solid var(--border-lit);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-nav:hover { background: rgba(74,158,202,0.3); }
+    .lightbox-prev { left: 1.25rem; }
+    .lightbox-next { right: 1.25rem; }
+    .lightbox-nav.hidden { display: none; }
+
+    .lightbox-counter {
+      margin-top: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
     /* ── ABOUT PAGE ─────────────────────────────────────────── */
     .about-layout {
       display: grid;
@@ -462,11 +468,7 @@
       gap: 5rem;
       align-items: start;
     }
-
-    @media (max-width: 760px) {
-      .about-layout { grid-template-columns: 1fr; gap: 3rem; }
-    }
-
+    @media (max-width: 760px) { .about-layout { grid-template-columns: 1fr; gap: 3rem; } }
     .about-photo {
       aspect-ratio: 3/4;
       background: var(--bg-card);
@@ -475,20 +477,6 @@
       overflow: hidden;
       position: relative;
     }
-
-    .about-photo-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--border-lit);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
     .about-content h2 {
       font-family: var(--font-display);
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
@@ -497,26 +485,9 @@
       line-height: 1.1;
       margin-bottom: 1.5rem;
     }
-
-    .about-content p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      line-height: 1.9;
-      margin-bottom: 1.25rem;
-    }
-
-    .about-content p strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-top: 2rem;
-    }
-
+    .about-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.25rem; }
+    .about-content p strong { color: var(--text); font-weight: 500; }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 2rem; }
     .skill-item {
       display: flex;
       align-items: center;
@@ -526,7 +497,6 @@
       color: var(--muted);
       letter-spacing: 0.04em;
     }
-
     .skill-item::before {
       content: '';
       width: 5px;
@@ -535,13 +505,7 @@
       background: var(--accent);
       flex-shrink: 0;
     }
-
-    .about-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
+    .about-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
 
     /* ── FOOTER ─────────────────────────────────────────────── */
     footer {
@@ -555,18 +519,8 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
-    footer p {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-
-    footer a {
-      color: var(--muted);
-      transition: color 0.2s;
-    }
+    footer p { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+    footer a { color: var(--muted); transition: color 0.2s; }
     footer a:hover { color: var(--accent); }
 
     /* ── EMPTY STATE ────────────────────────────────────────── */
@@ -581,13 +535,7 @@
       align-items: center;
       gap: 0.75rem;
     }
-
-    .empty-state p {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--border-lit);
-      letter-spacing: 0.06em;
-    }
+    .empty-state p { font-family: var(--font-mono); font-size: 0.8rem; color: var(--border-lit); letter-spacing: 0.06em; }
 
     /* ── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 600px) {
@@ -597,7 +545,6 @@
       .divider { padding: 0 1.25rem; }
       .skills-grid { grid-template-columns: 1fr; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
@@ -655,330 +602,11 @@
           </button>
         </div>
 
-        <!-- ALL -->
+        <!-- ═══════════════════════════════════════════════════
+             TAB: ALL
+        ════════════════════════════════════════════════════ -->
         <div class="tab-panel project-grid active" id="tab-all">
-          <!-- ═══ ADD YOUR PROJECTS BELOW — COPY THIS CARD BLOCK ═══ -->
 
-          <!-- PROJECT CARD TEMPLATE:
-          <article class="project-card">
-            <div class="project-img">
-              <img src="images/your-image.jpg" alt="Project Name" loading="lazy" />
-              — OR if no image yet: —
-              <div class="project-img-placeholder">[ image ]</div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>   ← use tag-cad / tag-built / tag-code
-                <span class="project-timeline">Jan 2024 – Mar 2024</span>
-              </div>
-              <h3 class="project-title">Your Project Title</h3>
-              <p class="project-blurb">
-                A short paragraph about what you built, why it mattered, and what role you played. 
-                Keep it to 2–3 sentences so cards stay uniform.
-              </p>
-              <a class="project-link" href="#" target="_blank">View details →</a>
-            </div>
-          </article>
-          -->
-
-          <!-- SAMPLE — delete or replace these once you add real projects -->
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/Truss1.png" alt="Warren Truss - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/Truss2.png" alt="Warren Truss - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/Truss3.png" alt="Warren Truss - view 3" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Jan 2026 – Apr 2026</span>
-              </div>
-            <h3 class="project-title">Truss Design</h3>
-          </div>
-        </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/P2P1.png" alt="Point-to-Point - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/P2P4.png" alt="Point-to-Point - view 3" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Sep 2025 – Dec 2025</span>
-              </div>
-              <h3 class="project-title">Point-to-Point Communication System</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/TempBox1.png" alt="Temperature Sensor Box - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/TempBox2.png" alt="Temperature Sensor Box - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Sep 2024 – Dec 2024</span>
-              </div>
-              <h3 class="project-title">Temperature Sensor</h3>
-            </div>
-          </article>
-
-
-          <article class="project-card">
-            <div class="project-img">
-              <img src="/haedyndarlinghillportfolio/images/Sikorsky1.png" alt="Sikorsky Transmission" loading="lazy" />
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Sep 2023 – May 2024</span>
-              </div>
-              <h3 class="project-title">X2 Helicopter Transmission</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/MATE2.png" alt="MATE ROV - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/MATE1.png" alt="MATE ROV - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Nov 2020 – Sep 2023</span>
-              </div>
-              <h3 class="project-title">Underwater ROV</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/cap1.png" alt="Fuel Cap - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/cap2.png" alt="Fuel Cap - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/cap3.png" alt="Fuel Cap - view 3" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/capdrawing.png" alt="Fuel Cap - view 3" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">April 30 2026 – May 2 2026</span>
-              </div>
-              <h3 class="project-title">Motorcycle Fuel Cap</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage1.png" alt="4-Bar-Linkage - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage2.png" alt="4-Bar-Linkage - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage3.png" alt="4-Bar-Linkage - view 3" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage4.png" alt="4-Bar-Linkage - view 4" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barexplodeddrawing.png" alt="4-Bar-Linkage - drawing" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">March 29 2026 – April 4 2026</span>
-              </div>
-              <h3 class="project-title">4-Bar-Linkage</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/ballandsocket.png" alt="Ball Valve - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/ballandsocketexploded.png" alt="Ball Valve Exploded - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">March 21 2026 – March 25 2026</span>
-              </div>
-              <h3 class="project-title">Ball Valve</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-built">Built</span>
-                <span class="project-timeline">Sep 2022 – May 2024</span>
-              </div>
-              <h3 class="project-title">VEX Robotics</h3>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/latheattatchment1.png" alt="Lathe Part - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/latheattatchment2.png" alt="Lathe Part - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">March 15 2026 – March 20 2026</span>
-              </div>
-              <h3 class="project-title">Lathe Headstock Body Part</h3>
-            </div>
-          </article>
-
-          
-          <!-- ═══════════════════════════════════════════════════════ -->
-        </div>
-
-        <!-- CAD -->
-
-        <div class="tab-panel project-grid" id="tab-cad">
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/cap1.png" alt="Fuel Cap - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/cap2.png" alt="Fuel Cap - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/cap3.png" alt="Fuel Cap - view 3" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/capdrawing.png" alt="Fuel Cap - view 3" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">April 30 2026 – May 2 2026</span>
-              </div>
-              <h3 class="project-title">Motorcycle Fuel Cap</h3>
-              <p class="project-blurb">
-                Completed for CAD/SolidWorks class.
-              </p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage1.png" alt="4-Bar-Linkage - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage2.png" alt="4-Bar-Linkage - view 2" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage3.png" alt="4-Bar-Linkage - view 3" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barlinkage4.png" alt="4-Bar-Linkage - view 4" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/4barexplodeddrawing.png" alt="4-Bar-Linkage - drawing" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">March 29 2026 – April 4 2026</span>
-              </div>
-              <h3 class="project-title">4-Bar-Linkage</h3>
-              <p class="project-blurb">
-                Completed for CAD/SolidWorks class, and given creative freedom on design and rotation style. Motion calculations done as well.
-              </p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/ballandsocket.png" alt="Ball Valve - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/ballandsocketexploded.png" alt="Ball Valve Exploded - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">March 21 2026 – March 25 2026</span>
-              </div>
-              <h3 class="project-title">Ball Valve</h3>
-              <p class="project-blurb">
-                Parts and assembly completed for CAD/Solidworks class. Handle turns ball accordingly.
-              </p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-img carousel" data-carousel>
-              <div class="carousel-track">
-                <img src="/haedyndarlinghillportfolio/images/latheattatchment1.png" alt="Lathe Part - view 1" loading="lazy" />
-                <img src="/haedyndarlinghillportfolio/images/latheattatchment2.png" alt="Lathe Part - view 2" loading="lazy" />
-              </div>
-              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
-              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
-              <div class="carousel-dots"></div>
-            </div>
-            <div class="project-body">
-              <div class="project-meta">
-                <span class="project-tag tag-cad">CAD</span>
-                <span class="project-timeline">March 15 2026 – March 20 2026</span>
-              </div>
-              <h3 class="project-title">Lathe Headstock Body Part</h3>
-              <p class="project-blurb">
-                For CAD/Solidworks class. Part of a lathe headstock body.
-              </p>
-            </div>
-          </article>
-
-
-
-        <!-- BUILT -->
-        <div class="tab-panel project-grid" id="tab-built">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -1058,7 +686,7 @@
               </div>
               <h3 class="project-title">X2 Helicopter Transmission</h3>
               <p class="project-blurb">
-                Assessed viability of back-emf based transmission in X2 helicopter. As mentioned on my About page, I partnered with a Sikorsky engineer to test if alternative transmission systems were possible in the X2. Designed and assembled scaled-down system, measured torque output, and concluded large-scale viability.
+                Assessed viability of back-emf based transmission in X2 helicopter. I partnered with a Sikorsky engineer to test if alternative transmission systems were possible in the X2. Designed and assembled scaled-down system, measured torque output, and concluded large-scale viability.
               </p>
             </div>
           </article>
@@ -1080,7 +708,7 @@
               </div>
               <h3 class="project-title">Underwater ROV (FLOAT-E)</h3>
               <p class="project-blurb">
-                In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. While my main responsibility was researching, designing, and building a compatible ESC for underwater use, I also gained experience designing the gripper and aiding in developing bouyancy. Designing the ESCs for BLDC motors was challenging but taught me the fundamentals of troubleshooting with oscilloscopes and in code, designing PCBs in Altium, and surface mount soldering. Not pictured are ballast tanks I helped design for Z-plane translation. 
+                In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. My main responsibility was researching, designing, and building a compatible ESC for underwater use. The team placed top-10 at the 2021 World Championships. Designing ESCs for BLDC motors taught me fundamentals of oscilloscope debugging, PCB design in Altium, and surface mount soldering.
               </p>
             </div>
           </article>
@@ -1100,23 +728,352 @@
                 <span class="project-tag tag-built">Built</span>
                 <span class="project-timeline">Sep 2022 – May 2024</span>
               </div>
-              <h3 class="project-title">VEX Robotics (HANSEL & GRETEL)</h3>
+              <h3 class="project-title">VEX Robotics (HANSEL &amp; GRETEL)</h3>
               <p class="project-blurb">
-                I founded and led the robotics team at the Berkshire School. The school had little experience or funding for a robotics team, so we operated largely as a learning opportunity. Over my tenure, I taught ~30 students the basics of robotics in programming, electrical, and mechanical disciplines. I also coordinated inter-school competitions between two chassis teams.
+                I founded and led the robotics team at the Berkshire School. Over my tenure, I taught ~30 students the basics of robotics across programming, electrical, and mechanical disciplines, and coordinated inter-school competitions between two chassis teams.
               </p>
             </div>
           </article>
 
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/cap1.png" alt="Fuel Cap - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap2.png" alt="Fuel Cap - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap3.png" alt="Fuel Cap - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/capdrawing.png" alt="Fuel Cap - drawing" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Apr 2026 – May 2026</span>
+              </div>
+              <h3 class="project-title">Motorcycle Fuel Cap</h3>
+              <p class="project-blurb">
+                Completed for CAD/SolidWorks class.
+              </p>
+            </div>
+          </article>
 
-        </div>
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage1.png" alt="4-Bar-Linkage - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage2.png" alt="4-Bar-Linkage - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage3.png" alt="4-Bar-Linkage - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage4.png" alt="4-Bar-Linkage - view 4" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barexplodeddrawing.png" alt="4-Bar-Linkage - drawing" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Mar 2026 – Apr 2026</span>
+              </div>
+              <h3 class="project-title">4-Bar Linkage</h3>
+              <p class="project-blurb">
+                Completed for CAD/SolidWorks class with creative freedom on design and rotation style. Motion calculations completed alongside the model.
+              </p>
+            </div>
+          </article>
 
-        <!-- CODE -->
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/ballandsocket.png" alt="Ball Valve - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/ballandsocketexploded.png" alt="Ball Valve - exploded" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Mar 2026</span>
+              </div>
+              <h3 class="project-title">Ball Valve</h3>
+              <p class="project-blurb">
+                Parts and assembly completed for CAD/SolidWorks class. Handle turns the ball accordingly.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment1.png" alt="Lathe Part - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment2.png" alt="Lathe Part - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Mar 2026</span>
+              </div>
+              <h3 class="project-title">Lathe Headstock Body Part</h3>
+              <p class="project-blurb">
+                For CAD/SolidWorks class. Part of a lathe headstock body.
+              </p>
+            </div>
+          </article>
+
+        </div><!-- /tab-all -->
+
+        <!-- ═══════════════════════════════════════════════════
+             TAB: CAD
+        ════════════════════════════════════════════════════ -->
+        <div class="tab-panel project-grid" id="tab-cad">
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/cap1.png" alt="Fuel Cap - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap2.png" alt="Fuel Cap - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap3.png" alt="Fuel Cap - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/capdrawing.png" alt="Fuel Cap - drawing" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Apr 2026 – May 2026</span>
+              </div>
+              <h3 class="project-title">Motorcycle Fuel Cap</h3>
+              <p class="project-blurb">
+                Completed for CAD/SolidWorks class.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage1.png" alt="4-Bar-Linkage - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage2.png" alt="4-Bar-Linkage - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage3.png" alt="4-Bar-Linkage - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage4.png" alt="4-Bar-Linkage - view 4" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barexplodeddrawing.png" alt="4-Bar-Linkage - drawing" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Mar 2026 – Apr 2026</span>
+              </div>
+              <h3 class="project-title">4-Bar Linkage</h3>
+              <p class="project-blurb">
+                Completed for CAD/SolidWorks class with creative freedom on design and rotation style. Motion calculations completed alongside the model.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/ballandsocket.png" alt="Ball Valve - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/ballandsocketexploded.png" alt="Ball Valve - exploded" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Mar 2026</span>
+              </div>
+              <h3 class="project-title">Ball Valve</h3>
+              <p class="project-blurb">
+                Parts and assembly completed for CAD/SolidWorks class. Handle turns the ball accordingly.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment1.png" alt="Lathe Part - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment2.png" alt="Lathe Part - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">Mar 2026</span>
+              </div>
+              <h3 class="project-title">Lathe Headstock Body Part</h3>
+              <p class="project-blurb">
+                For CAD/SolidWorks class. Part of a lathe headstock body.
+              </p>
+            </div>
+          </article>
+
+        </div><!-- /tab-cad -->
+
+        <!-- ═══════════════════════════════════════════════════
+             TAB: BUILT
+        ════════════════════════════════════════════════════ -->
+        <div class="tab-panel project-grid" id="tab-built">
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/Truss1.png" alt="Warren Truss - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Truss2.png" alt="Warren Truss - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Truss3.png" alt="Warren Truss - view 3" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Jan 2026 – Apr 2026</span>
+              </div>
+              <h3 class="project-title">Truss Design (JANICE)</h3>
+              <p class="project-blurb">
+                Designed and built a Warren truss within strict material and geometric constraints. Developed MATLAB code to predict collapse load based on joint placement and member length, then iterated in CAD to optimize the design before fabrication and assembly.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/P2P1.png" alt="Point-to-Point - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P3.png" alt="Point-to-Point - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/P2P4.png" alt="Point-to-Point - view 3" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2025 – Dec 2025</span>
+              </div>
+              <h3 class="project-title">Point-to-Point Communication System (HERMES)</h3>
+              <p class="project-blurb">
+                Built in my sophomore-year project class. We were tasked with designing a system that could transmit 8 messages at a distance of 10 feet. I was completely responsible for the transmission system (metal box). I designed a communication system based on morse, integrated and programmed the user-input keypad, laser, and motor (to rotate laser). I designed the housing with aluminum to gain experience working with metal on the waterjet cutter and spot welding.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/TempBox1.png" alt="Temperature Sensor Box - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/TempBox2.png" alt="Temperature Sensor Box - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2024 – Dec 2024</span>
+              </div>
+              <h3 class="project-title">Temperature Sensor (JAKE)</h3>
+              <p class="project-blurb">
+                Built in my freshman-year project class. I was tasked with building a box to read the ambient temperature in the room and buzz periodically when the temperature exceeded a certain threshold. This project involved integrating multiple sensors and an LCD screen into one system using an Arduino. While rather simple, it helped me get my bearings, and I use it every day in my apartment.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img">
+              <img src="/haedyndarlinghillportfolio/images/Sikorsky1.png" alt="Sikorsky Transmission" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2023 – May 2024</span>
+              </div>
+              <h3 class="project-title">X2 Helicopter Transmission</h3>
+              <p class="project-blurb">
+                Assessed viability of back-emf based transmission in X2 helicopter. I partnered with a Sikorsky engineer to test if alternative transmission systems were possible in the X2. Designed and assembled scaled-down system, measured torque output, and concluded large-scale viability.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/MATE2.png" alt="MATE ROV - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/MATE1.png" alt="MATE ROV - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Nov 2020 – Sep 2023</span>
+              </div>
+              <h3 class="project-title">Underwater ROV (FLOAT-E)</h3>
+              <p class="project-blurb">
+                In 8th grade, I was invited to join the high-school MATE ROV Underwater Robotics team. My main responsibility was researching, designing, and building a compatible ESC for underwater use. The team placed top-10 at the 2021 World Championships. Designing ESCs for BLDC motors taught me fundamentals of oscilloscope debugging, PCB design in Altium, and surface mount soldering.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/Vex1.png" alt="Vex Robotics - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-built">Built</span>
+                <span class="project-timeline">Sep 2022 – May 2024</span>
+              </div>
+              <h3 class="project-title">VEX Robotics (HANSEL &amp; GRETEL)</h3>
+              <p class="project-blurb">
+                I founded and led the robotics team at the Berkshire School. Over my tenure, I taught ~30 students the basics of robotics across programming, electrical, and mechanical disciplines, and coordinated inter-school competitions between two chassis teams.
+              </p>
+            </div>
+          </article>
+
+        </div><!-- /tab-built -->
+
+        <!-- ═══════════════════════════════════════════════════
+             TAB: CODE
+        ════════════════════════════════════════════════════ -->
         <div class="tab-panel project-grid" id="tab-code">
           <div class="empty-state">
             <p>// no code projects yet</p>
             <p>Copy a project-card block from the "All" tab and paste it here.</p>
           </div>
-        </div>
+        </div><!-- /tab-code -->
 
       </div><!-- /section -->
     </div>
@@ -1142,35 +1099,31 @@
     <div class="section">
       <div class="about-layout">
 
-      <div class="about-photo">
-        <img src="/haedyndarlinghillportfolio/images/Headshot.png" alt="Haedyn Darling-Hill" />
-      </div>
+        <div class="about-photo">
+          <img src="/haedyndarlinghillportfolio/images/Headshot.png" alt="Haedyn Darling-Hill" />
+        </div>
 
         <div class="about-content">
           <h2>Haedyn<br/>Darling Hill</h2>
 
-          <!-- ═══ EDIT THIS SECTION ═══ -->
           <p>
-            <strong>Mechanical Engineer, Student-Athlete </strong> — I am pursuing a Mechanical Engineering BS on track to graduate in 2028. I have gained experience in CAD and project design, underwater ROVs, FRC and VEX robotics, full-system design, MATLAB, Python, and biomechanical research.
+            <strong>Mechanical Engineer, Student-Athlete</strong> — I am pursuing a Mechanical Engineering BS on track to graduate in 2028. I have gained experience in CAD and project design, underwater ROVs, FRC and VEX robotics, full-system design, MATLAB, Python, and biomechanical research.
           </p>
           <p>
-            From 2020–2023, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> team at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
+            From 2020–2023, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
             After transferring schools, I founded a VEX robotics team: building the curriculum, leading three subteams, and running an internal competition model by end of year one.
-            My junior and senior years, I participated in an invite-only research program in partnership with a Sikorsky Lockheed Martin engineer. Working on the X2 helicopter's main gearbox, I designed an electrical transmission system using back-EMF to reduce the vibrational instability inherent in the aircraft's mechanical drivetrain at high speeds and demonstrated proof-of-concept viability at scale.
+            My junior and senior years, I participated in an invite-only research program in partnership with a Sikorsky Lockheed Martin engineer. Working on the X2 helicopter's main gearbox, I designed an electrical transmission system using back-EMF to reduce vibrational instability and demonstrated proof-of-concept viability at scale.
           </p>
           <p>
-          Both university summers have been spent in technical roles outside the classroom.
-          After freshman year, I interned at Synthesia.io on the R&D team, contributing to AI model design with a focus on improving the naturalism of synthesized speech and image output.
-          After sophomore year, I was awarded the largest undergraduate research grant available at my institution to study the relationship between inter-limb hip asymmetry and pain; applying biomechanical analysis to a clinical research context.
+            Both university summers have been spent in technical roles outside the classroom.
+            After freshman year, I interned at Synthesia.io on the R&amp;D team, contributing to AI model design with a focus on improving the naturalism of synthesized speech and image output.
+            After sophomore year, I was awarded the largest undergraduate research grant available at my institution to study the relationship between inter-limb hip asymmetry and pain, applying biomechanical analysis to a clinical research context.
           </p>
-
           <p>
-            I play as a fullback/wing for Boston University's Women's Rugby team! Team commitments take upwards of 10-15 hours per week, and I love every minute of it. I have been an athlete in various sports for the better of 8 years, and it has made me who I am. Sports, and rugby in particular, have taught me to be resiliant, hard working, and collaborative. Playing on the rugby team makes me a better engineer every day.
+            I play as a fullback/wing for Boston University's Women's Rugby team! Team commitments take upwards of 10–15 hours per week, and I love every minute of it. Sports, and rugby in particular, have taught me to be resilient, hard working, and collaborative.
           </p>
-          <!-- ════════════════════════ -->
 
           <div class="skills-grid">
-            <!-- ═══ EDIT THESE SKILLS ═══ -->
             <span class="skill-item">SolidWorks</span>
             <span class="skill-item">Onshape</span>
             <span class="skill-item">Python</span>
@@ -1180,7 +1133,6 @@
             <span class="skill-item">Arduino / RPi</span>
             <span class="skill-item">Visual3D</span>
             <span class="skill-item">Vicon</span>
-            <!-- Add or remove as needed -->
           </div>
 
           <div class="about-links">
@@ -1206,41 +1158,144 @@
     </p>
   </footer>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media viewer">
+    <button class="lightbox-close" id="lb-close" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev hidden" id="lb-prev" aria-label="Previous">‹</button>
+    <div id="lb-content"></div>
+    <button class="lightbox-nav lightbox-next hidden" id="lb-next" aria-label="Next">›</button>
+    <div class="lightbox-counter" id="lb-counter"></div>
+  </div>
+
   <script>
-    // ── Page switching ───────────────────────────────────────
+    // ── Page switching ──────────────────────────────────────
     function showPage(name) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-
       document.getElementById('page-' + name).classList.add('active');
       document.getElementById('nav-' + name).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return false;
     }
 
-    // ── Tab switching ────────────────────────────────────────
+    // ── Tab switching ───────────────────────────────────────
     function switchTab(tab) {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-
       document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
       document.getElementById('tab-' + tab).classList.add('active');
     }
 
-    // Prevent default on nav links
     document.querySelectorAll('.nav-links a[onclick]').forEach(a => {
       a.addEventListener('click', e => e.preventDefault());
     });
 
-    // ── Carousels ────────────────────────────────────────────
+    // ── Lightbox ────────────────────────────────────────────
+    const lb        = document.getElementById('lightbox');
+    const lbContent = document.getElementById('lb-content');
+    const lbCounter = document.getElementById('lb-counter');
+    const lbPrev    = document.getElementById('lb-prev');
+    const lbNext    = document.getElementById('lb-next');
+    const lbClose   = document.getElementById('lb-close');
+
+    let lbItems  = [];   // array of {type:'img'|'video', src, poster?}
+    let lbIndex  = 0;
+
+    function lbOpen(items, startIndex) {
+      lbItems = items;
+      lbIndex = startIndex;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lbRender();
+    }
+
+    function lbClose_() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+      // pause any playing video
+      const vid = lbContent.querySelector('video');
+      if (vid) vid.pause();
+      lbContent.innerHTML = '';
+    }
+
+    function lbRender() {
+      // pause any playing video before switching
+      const prevVid = lbContent.querySelector('video');
+      if (prevVid) prevVid.pause();
+
+      const item = lbItems[lbIndex];
+      lbContent.innerHTML = '';
+
+      if (item.type === 'video') {
+        const v = document.createElement('video');
+        v.className = 'lightbox-media';
+        v.controls = true;
+        v.autoplay = true;
+        v.loop = true;
+        v.style.maxWidth  = '92vw';
+        v.style.maxHeight = '82vh';
+        if (item.poster) v.poster = item.poster;
+        const s = document.createElement('source');
+        s.src  = item.src;
+        s.type = 'video/mp4';
+        v.appendChild(s);
+        lbContent.appendChild(v);
+      } else {
+        const img = document.createElement('img');
+        img.className = 'lightbox-media';
+        img.src = item.src;
+        img.alt = item.alt || '';
+        lbContent.appendChild(img);
+      }
+
+      // nav arrows
+      lbPrev.classList.toggle('hidden', lbItems.length <= 1);
+      lbNext.classList.toggle('hidden', lbItems.length <= 1);
+
+      // counter
+      lbCounter.textContent = lbItems.length > 1
+        ? `${lbIndex + 1} / ${lbItems.length}`
+        : '';
+    }
+
+    lbClose.addEventListener('click', lbClose_);
+    lb.addEventListener('click', e => { if (e.target === lb) lbClose_(); });
+
+    lbPrev.addEventListener('click', () => {
+      lbIndex = (lbIndex - 1 + lbItems.length) % lbItems.length;
+      lbRender();
+    });
+    lbNext.addEventListener('click', () => {
+      lbIndex = (lbIndex + 1) % lbItems.length;
+      lbRender();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')      lbClose_();
+      if (e.key === 'ArrowLeft')  { lbIndex = (lbIndex - 1 + lbItems.length) % lbItems.length; lbRender(); }
+      if (e.key === 'ArrowRight') { lbIndex = (lbIndex + 1) % lbItems.length;                  lbRender(); }
+    });
+
+    // ── Carousels ───────────────────────────────────────────
+    // Helper: gather all media items from a carousel track
+    function gatherItems(track) {
+      return Array.from(track.querySelectorAll('img, video')).map(el => {
+        if (el.tagName === 'VIDEO') {
+          return { type: 'video', src: el.querySelector('source')?.src || el.src, poster: el.poster || '' };
+        }
+        return { type: 'img', src: el.src, alt: el.alt };
+      });
+    }
+
     document.querySelectorAll('[data-carousel]').forEach(carousel => {
-      const track = carousel.querySelector('.carousel-track');
-      const imgs = track.querySelectorAll('img');
+      const track        = carousel.querySelector('.carousel-track');
+      const slides       = track.querySelectorAll('img, video');
       const dotsContainer = carousel.querySelector('.carousel-dots');
       let current = 0;
 
       // Build dots
-      imgs.forEach((_, i) => {
+      slides.forEach((_, i) => {
         const dot = document.createElement('div');
         dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
         dot.addEventListener('click', () => goTo(i));
@@ -1248,15 +1303,43 @@
       });
 
       function goTo(n) {
-        current = (n + imgs.length) % imgs.length;
+        current = (n + slides.length) % slides.length;
         track.style.transform = `translateX(-${current * 100}%)`;
         dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
           d.classList.toggle('active', i === current);
         });
+        // pause any videos that aren't current
+        slides.forEach((s, i) => {
+          if (s.tagName === 'VIDEO' && i !== current) s.pause();
+        });
       }
 
-      carousel.querySelector('.carousel-prev').addEventListener('click', () => goTo(current - 1));
-      carousel.querySelector('.carousel-next').addEventListener('click', () => goTo(current + 1));
+      carousel.querySelector('.carousel-prev').addEventListener('click', e => {
+        e.stopPropagation();
+        goTo(current - 1);
+      });
+      carousel.querySelector('.carousel-next').addEventListener('click', e => {
+        e.stopPropagation();
+        goTo(current + 1);
+      });
+
+      // click on the image/video area → open lightbox at current slide
+      track.addEventListener('click', e => {
+        // don't trigger if a button inside was clicked
+        if (e.target.closest('.carousel-btn')) return;
+        lbOpen(gatherItems(track), current);
+      });
+    });
+
+    // Single (non-carousel) project images → lightbox
+    document.querySelectorAll('.project-img:not([data-carousel]) img, .project-img:not([data-carousel]) video').forEach(el => {
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', () => {
+        const item = el.tagName === 'VIDEO'
+          ? { type: 'video', src: el.querySelector('source')?.src || el.src, poster: el.poster || '' }
+          : { type: 'img', src: el.src, alt: el.alt };
+        lbOpen([item], 0);
+      });
     });
   </script>
 </body>
