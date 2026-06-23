@@ -569,7 +569,7 @@
 
     <div class="hero">
       <p class="hero-eyebrow">Engineering Portfolio</p>
-      <h1>Design.<br/>Build. <span>Iterate.</span></h1>
+      <h1>Create.<br/>Test. <span>Improve.</span></h1>
       <p>Mechanical engineering student at Boston University. These are the projects I've worked on — CAD models, physical builds, and software tools.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#projects-section">See the work ↓</a>
