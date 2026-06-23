@@ -775,6 +775,71 @@
             </div>
           </article>
 
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/cap1.png" alt="Fuel Cap - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap2.png" alt="Fuel Cap - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap3.png" alt="Fuel Cap - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/capdrawing.png" alt="Fuel Cap - view 3" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">April 30 2026 – May 2 2026</span>
+              </div>
+              <h3 class="project-title">Motorcycle Fuel Cap</h3>
+            </div>
+          </article>
+
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage1.png" alt="4-Bar-Linkage - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage2.png" alt="4-Bar-Linkage - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage3.png" alt="4-Bar-Linkage - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage4.png" alt="4-Bar-Linkage - view 4" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barexplodeddrawing.png" alt="4-Bar-Linkage - drawing" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">March 29 2026 – April 4 2026</span>
+              </div>
+              <h3 class="project-title">4-Bar-Linkage</h3>
+            </div>
+          </article>
+
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/ballandsocket.png" alt="Ball Valve - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/ballandsocketexploded.png" alt="Ball Valve Exploded - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">March 21 2026 – March 25 2026</span>
+              </div>
+              <h3 class="project-title">Ball Valve</h3>
+            </div>
+          </article>
+
                     <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -794,18 +859,130 @@
             </div>
           </article>
 
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment1.png" alt="Lathe Part - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment2.png" alt="Lathe Part - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">March 15 2026 – March 20 2026</span>
+              </div>
+              <h3 class="project-title">Lathe Headstock Body Part</h3>
+            </div>
+          </article>
+
           
           <!-- ═══════════════════════════════════════════════════════ -->
         </div>
 
         <!-- CAD -->
+
         <div class="tab-panel project-grid" id="tab-cad">
-          <!-- Copy tag-cad cards here, or leave the empty state below -->
-          <div class="empty-state">
-            <p>// no CAD projects yet</p>
-            <p>Copy a project-card block from the "All" tab and paste it here.</p>
-          </div>
-        </div>
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/cap1.png" alt="Fuel Cap - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap2.png" alt="Fuel Cap - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/cap3.png" alt="Fuel Cap - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/capdrawing.png" alt="Fuel Cap - view 3" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">April 30 2026 – May 2 2026</span>
+              </div>
+              <h3 class="project-title">Motorcycle Fuel Cap</h3>
+              <p class="project-blurb">
+                Completed for CAD/SolidWorks class.
+              </p>
+            </div>
+          </article>
+
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage1.png" alt="4-Bar-Linkage - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage2.png" alt="4-Bar-Linkage - view 2" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage3.png" alt="4-Bar-Linkage - view 3" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barlinkage4.png" alt="4-Bar-Linkage - view 4" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/4barexplodeddrawing.png" alt="4-Bar-Linkage - drawing" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">March 29 2026 – April 4 2026</span>
+              </div>
+              <h3 class="project-title">4-Bar-Linkage</h3>
+              <p class="project-blurb">
+                Completed for CAD/SolidWorks class, and given creative freedom on design and rotation style. Motion calculations done as well.
+              </p>
+            </div>
+          </article>
+
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/ballandsocket.png" alt="Ball Valve - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/ballandsocketexploded.png" alt="Ball Valve Exploded - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">March 21 2026 – March 25 2026</span>
+              </div>
+              <h3 class="project-title">Ball Valve</h3>
+              <p class="project-blurb">
+                Parts and assembly completed for CAD/Solidworks class. Handle turns ball accordingly.
+              </p>
+            </div>
+          </article>
+
+          <div class="tab-panel project-grid" id="tab-cad">
+          <article class="project-card">
+            <div class="project-img carousel" data-carousel>
+              <div class="carousel-track">
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment1.png" alt="Lathe Part - view 1" loading="lazy" />
+                <img src="/haedyndarlinghillportfolio/images/latheattatchment2.png" alt="Lathe Part - view 2" loading="lazy" />
+              </div>
+              <button class="carousel-btn carousel-prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn carousel-next" aria-label="Next">›</button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-tag tag-cad">CAD</span>
+                <span class="project-timeline">March 15 2026 – March 20 2026</span>
+              </div>
+              <h3 class="project-title">Lathe Headstock Body Part</h3>
+              <p class="project-blurb">
+                For CAD/Solidworks class. Part of a lathe headstock body.
+              </p>
+            </div>
+          </article>
+
+
 
         <!-- BUILT -->
         <div class="tab-panel project-grid" id="tab-built">
