@@ -775,7 +775,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -797,7 +796,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -820,7 +818,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -840,7 +837,7 @@
             </div>
           </article>
 
-                    <article class="project-card">
+          <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
                 <img src="/haedyndarlinghillportfolio/images/Vex2.png" alt="Vex Robotics - view 1" loading="lazy" />
@@ -859,7 +856,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
