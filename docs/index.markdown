@@ -906,7 +906,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -932,7 +931,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
@@ -955,7 +953,6 @@
             </div>
           </article>
 
-          <div class="tab-panel project-grid" id="tab-cad">
           <article class="project-card">
             <div class="project-img carousel" data-carousel>
               <div class="carousel-track">
