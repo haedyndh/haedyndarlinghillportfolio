@@ -1110,6 +1110,9 @@
             <strong>Mechanical Engineer, Student-Athlete</strong> — I am pursuing a Mechanical Engineering BS on track to graduate in 2028. I have gained experience in CAD and project design, underwater ROVs, FRC and VEX robotics, full-system design, MATLAB, Python, and biomechanical research.
           </p>
           <p>
+          <strong>write this from newest to oldest</strong>
+          </p>
+          <p>
             From 2020–2023, I worked on a <a href="https://20693798.fs1.hubspotusercontent-na1.net/hubfs/20693798/TechReportArchives/2021/Seattle%20Academy_Blueshift%20Robotics_Technical%20Documentation_2021.pdf" target="_blank" rel="noopener">MATE Underwater ROV team</a> at Seattle Academy, designing an ROV for autonomous coral reef monitoring. Commercially available ESCs didn't meet our control requirements, so I designed and integrated a custom one. The team placed top-10 at the 2021 World Championships. I also contributed to the FRC team's electrical division, collaborating with mechanical to produce competition-ready component housings.
             After transferring schools, I founded a VEX robotics team: building the curriculum, leading three subteams, and running an internal competition model by end of year one.
             My junior and senior years, I participated in an invite-only research program in partnership with a Sikorsky Lockheed Martin engineer. Working on the X2 helicopter's main gearbox, I designed an electrical transmission system using back-EMF to reduce vibrational instability and demonstrated proof-of-concept viability at scale.
@@ -1120,7 +1123,7 @@
             After sophomore year, I was awarded the largest undergraduate research grant available at my institution to study the relationship between inter-limb hip asymmetry and pain, applying biomechanical analysis to a clinical research context.
           </p>
           <p>
-            I play as a fullback/wing for Boston University's Women's Rugby team! Team commitments take upwards of 10–15 hours per week, and I love every minute of it. Sports, and rugby in particular, have taught me to be resilient, hard working, and collaborative.
+            I play as a fullback/wing for Boston University's Women's Rugby team! Team commitments take upwards of 10–15 hours per week, and I love every minute of it. Sports, and rugby in particular, have taught me to be resilient, hard working, and collaborative. Rugby makes me a better engineer every day.
           </p>
 
           <div class="skills-grid">
