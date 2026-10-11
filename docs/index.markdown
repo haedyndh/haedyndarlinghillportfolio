@@ -1149,7 +1149,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Haedyn Darling-Hill · Engineering Portfolio</p>
+    <p>Haedyn Darling Hill · Engineering Portfolio</p>
     <p>
       <a href="https://github.com/haedyndh" target="_blank" rel="noopener">GitHub</a>
       &nbsp;·&nbsp;
